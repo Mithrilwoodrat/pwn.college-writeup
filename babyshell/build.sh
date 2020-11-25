@@ -15,4 +15,4 @@ echo "output: $target"
 
 gcc -nostdlib -static $source -o tmp.elf
 objcopy --dump-section .text=$target tmp.elf
-cat shellcode-raw|disasm -c 'amd64' > shellcode.disasm
+cat $target|disasm -c 'amd64' > $target.disasm

